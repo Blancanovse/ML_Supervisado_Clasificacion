@@ -1,0 +1,74 @@
+Documentación consultada a lo largo del proyecto:
+
+- Parámetros para gráficas:
+https://seaborn.pydata.org/generated/seaborn.pairplot.html
+
+- Encoders:
+https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html
+
+https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html
+
+- Curva de aprendizaje de modelos:
+https://scikit-learn.org/stable/auto_examples/model_selection/plot_learning_curve.html
+
+https://scikit-learn.org/stable/modules/learning_curve.html
+
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LearningCurveDisplay.html#sklearn.model_selection.LearningCurveDisplay
+
+
+- Modelos:
+https://catboost.ai/en/docs/concepts/python-reference_catboostclassifier
+
+https://mljourney.com/xgboost-vs-gradient-boost-differences-and-use-cases/
+
+https://lightgbm.readthedocs.io/en/latest/pythonapi/lightgbm.LGBMClassifier.html
+
+https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
+
+https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+
+https://scikit-learn.org/stable/modules/neural_networks_supervised.html#tips-on-practical-use
+
+https://keras.io/guides/sequential_model/
+
+https://medium.com/@LayanSA/complete-guide-to-adam-optimization-1e5f29532c3d
+
+https://www.tensorflow.org/tutorials/structured_data/imbalanced_data?hl=es-419
+
+
+- Validación cruzada:
+https://scikit-learn.org/stable/modules/cross_validation.html
+
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_val_score.html
+
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_validate.html
+
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html#sklearn.model_selection.StratifiedKFold
+
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html
+
+
+- Pipelines:
+https://cienciadedatos.net/documentos/py06_machine_learning_python_scikitlearn.html
+
+
+
+- Normalización de datos:
+https://learnbyinsight.com/2020/09/27/probability-distribution-an-aid-to-know-the-data/
+
+https://scikit-learn.org/stable/auto_examples/preprocessing/plot_all_scaling.html
+
+https://medium.com/@onersarpnalcin/standardscaler-vs-minmaxscaler-vs-robustscaler-which-one-to-use-for-your-next-ml-project-ae5b44f571b9
+
+
+- métricas:
+https://scikit-learn.org/stable/modules/generated/sklearn.metrics.balanced_accuracy_score.html
+
+
+- Feature Importance:
+
+https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectFromModel.html#sklearn.feature_selection.SelectFromModel
+
+
+- Streamlit:
+https://streamlit.io/
