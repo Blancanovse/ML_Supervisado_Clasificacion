@@ -26,4 +26,5 @@ Nos centraremos en el balanced accuracy y recall medio dada las características
 **Requerimientos**  
 Para ejecutar la aplicaicón web con Streamlit:
 1. Abrir terminal
-2. Ejecutar desde el directorio donde se encuentre el script: streamlit run engagement_predictor.py
+2. Descomprimir carpeta src/model
+3. Ejecutar desde el directorio donde se encuentre el script: streamlit run engagement_predictor.py
