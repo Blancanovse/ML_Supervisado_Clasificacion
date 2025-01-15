@@ -13,6 +13,7 @@ from PIL import Image
 from sklearn.model_selection import train_test_split, LearningCurveDisplay, learning_curve
 from sklearn.metrics import ConfusionMatrixDisplay
 from utils import bootcampviztools
+import os
 
 
 st.sidebar.title("Menu")
@@ -51,7 +52,9 @@ elif menu == 'Análisis':
     st.header(':dart: Traget')
 
     #importamos los datos del dataset para generar los sets de train y test para las gráficas
-    data = pd.read_csv("./data/raw/online_gaming_behavior_dataset.csv")
+    #data = pd.read_csv("./data/raw/online_gaming_behavior_dataset.csv")
+    file_path_data = os.path.abspath("./data/raw/online_gaming_behavior_dataset.csv")
+    data = pd.read_csv(file_path_data)
     target = 'EngagementLevel'
     train_set, test_set = train_test_split(data, test_size=0.2, stratify=data[target], random_state=42)
 
@@ -247,7 +250,9 @@ elif menu == 'Comparativa de modelos':
     st.header(':pushpin: Baseline') 
     st.markdown('Resultados de cross_validate combinado con StratifiedKFold()')
     #importamos df y añadimos columna con url de la imagen para el df interactivo
-    baseline_df = pd.read_csv('./data/df_resultados_cv.csv')
+    #baseline_df = pd.read_csv('./data/df_resultados_cv.csv')
+    file_path_baseline = os.path.abspath("./data/df_resultados_cv.csv")
+    baseline_df = pd.read_csv(file_path_baseline)
     baseline_df['img'] = ['./img/baseline_curves/b_dt_curve.png', './img/baseline_curves/b_rl_curve.png', 
                           './img/baseline_curves/b_rf_curve.png', './img/baseline_curves/b_xgb_curve.png',
                            './img/baseline_curves/b_lgbm_curve.png', './img/baseline_curves/b_knn_curve.png',
@@ -289,7 +294,9 @@ elif menu == 'Comparativa de modelos':
             
 
         st.subheader('Comparativa')
-        df_comp_lgbm = pd.read_csv('./data/df_comp_lgbm.csv')
+        #df_comp_lgbm = pd.read_csv('./data/df_comp_lgbm.csv')
+        file_path_lgbm = os.path.abspath('./data/df_comp_lgbm.csv')
+        df_comp_lgbm = pd.read_csv(file_path_lgbm)
         df_comp_lgbm.rename(columns={'Unnamed: 0' : 'model'}, inplace=True)
         st.dataframe(df_comp_lgbm)
 
@@ -310,7 +317,9 @@ elif menu == 'Comparativa de modelos':
             
 
         st.subheader('Comparativa')
-        df_comp_rf = pd.read_csv('./data/df_comp_rf.csv')
+        #df_comp_rf = pd.read_csv('./data/df_comp_rf.csv')
+        file_path_rf = os.path.abspath('./data/df_comp_rf.csv')
+        df_comp_rf = pd.read_csv(file_path_rf)
         df_comp_rf.rename(columns={'Unnamed: 0' : 'model'}, inplace=True)
         st.dataframe(df_comp_rf)
 
@@ -327,7 +336,9 @@ elif menu == 'Comparativa de modelos':
             
 
         st.subheader('Comparativa')
-        df_comp_lr = pd.read_csv('./data/df_comp_lr.csv')
+        #df_comp_lr = pd.read_csv('./data/df_comp_lr.csv')
+        file_path_lr = os.path.abspath('./data/df_comp_lr.csv')
+        df_comp_lr = pd.read_csv(file_path_lr)
         df_comp_lr.rename(columns={'Unnamed: 0' : 'model'}, inplace=True)
         st.dataframe(df_comp_lr)
 
@@ -362,10 +373,16 @@ elif menu == 'Demo Predicción':
     st.markdown('')
 
     #importamos modelo seleccionado y preprocesador
-    with open ('./model/preprocessing.pkl', 'rb') as file:
+    file_path_preproc = os.path.abspath('./model/preprocessing.pkl')
+    file_preprocessing = pd.read_csv(file_path_preproc)
+    #with open ('./model/preprocessing.pkl', 'rb') as file:
+    with open (file_preprocessing, 'rb') as file:
         preprocessing = pickle.load(file)
     
-    with open('./model/Modelo_LGBMClassifier_Controled', 'rb') as file:
+    #with open('./model/Modelo_LGBMClassifier_Controled', 'rb') as file:
+    file_path_model = os.path.abspath('./model/Modelo_LGBMClassifier_Controled')
+    model_file= pd.read_csv(file_path_model)
+    with open (model_file, 'rb') as file:
         unpickle_model_lgbm_controled = pickle.load(file)
 
     st.subheader('**:birthday: Edad**')
