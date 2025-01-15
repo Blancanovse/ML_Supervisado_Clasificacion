@@ -20,12 +20,8 @@ Nos centraremos en el balanced accuracy y recall medio dada las características
 
 **Documentos**  
 - main.ipynb : Jupiter Notebook con el contenido del proyecto y conclusiones.
-- src : Directorio de carpetas donde se encuentran imágenes empleadas en el dataset, datos, modelo entrenados y scripts utilizados.
+- src : Directorio de carpetas donde se encuentran imágenes empleadas en el dataset, datos, modelo entrenado, scripts utilizados y requirements.
 - engagement_predictor.py : script con código para una presentación del proyecto desplegada en Streamlit además de una demo de predicciones del modelo.
 - Modelo seleccionado para la demo: src/model/Modelo_LGBMClassifier_Controled.pkl
 
-**Requerimientos**  
-Para ejecutar la aplicaicón web con Streamlit:
-1. Abrir terminal
-2. Descomprimir carpeta src/model
-3. Ejecutar desde el directorio donde se encuentre el script: streamlit run engagement_predictor.py
+
