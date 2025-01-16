@@ -361,7 +361,7 @@ elif menu == 'Comparativa de modelos':
                     activation='softmax'))
                     '''
         st.code(code, language='python')
-        img_mlp = './img/Arquitectura_modelo_mlp.png'
+        img_mlp = os.path.join(BASE_PATH, './img/Arquitectura_modelo_mlp.png')
         st.image(img_mlp, use_container_width=True)
 
         st.markdown('**Métricas:**')
