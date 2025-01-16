@@ -292,7 +292,8 @@ elif menu == 'Comparativa de modelos':
             
 
         st.subheader('Comparativa')
-        df_comp_lgbm = pd.read_csv('./data/df_comp_lgbm.csv')
+        #df_comp_lgbm = pd.read_csv('./data/df_comp_lgbm.csv')
+        df_comp_lgbm= pd.read_csv(os.path.join(BASE_PATH, './data/df_comp_lgbm.csv' ))
         df_comp_lgbm.rename(columns={'Unnamed: 0' : 'model'}, inplace=True)
         st.dataframe(df_comp_lgbm)
 
