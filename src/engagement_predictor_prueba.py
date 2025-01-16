@@ -270,7 +270,7 @@ elif menu == 'Comparativa de modelos':
 
     if not filas_seleccionadas.empty:
         for imagen, fila in filas_seleccionadas.iterrows(): #iteramos sobre las filas para abrir las imagenes desde la ruta proporcionada
-            imagen = Image.open(fila['img'])
+            imagen = Image.open(baseline_img)
             st.image(imagen)
     
     #Apartado de comparativa de modelos seleccionados
