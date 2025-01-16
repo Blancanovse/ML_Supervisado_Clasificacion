@@ -250,8 +250,10 @@ elif menu == 'Comparativa de modelos':
 
     st.header(':pushpin: Baseline') 
     st.markdown('Resultados de cross_validate combinado con StratifiedKFold()')
+
     #importamos df y añadimos columna con url de la imagen para el df interactivo
     BASE_PATH = os.path.dirname(os.path.abspath(__file__))
+
     baseline_df = pd.read_csv(os.path.join(BASE_PATH,'./data/df_resultados_cv.csv'))
     baseline_df['img'] = ['./img/baseline_curves/b_dt_curve.png', './img/baseline_curves/b_rl_curve.png', 
                           './img/baseline_curves/b_rf_curve.png', './img/baseline_curves/b_xgb_curve.png',
@@ -287,8 +289,11 @@ elif menu == 'Comparativa de modelos':
     
         imagenes_lgbm = ['./img/lgbm_plots/lgbm_optimized_curve.png', './img/lgbm_plots/lgbm_conf_matrix_optimized.png',
                          './img/lgbm_plots/lgbm_optimized_1_curve.png', './img/lgbm_plots/lgbm_conf_matrix_optimized_1.png']
+
+        path_img_lgbm = [os.path.join(BASE_PATH, ruta) for ruta in imagenes_lgbm]
+
         
-        for imagen in imagenes_lgbm:
+        for imagen in path_img_lgbm:
             img = Image.open(imagen)
             st.image(img, use_container_width=True)
             
@@ -309,8 +314,11 @@ elif menu == 'Comparativa de modelos':
     
         imagenes_rf = ['./img/rf_plots/rf_optimized_1_curve.png', './img/rf_plots/rf_optimized_2_curve.png', 
                          './img/rf_plots/rf_optimized_3_curve.png', './img/rf_plots/rf_conf_matrix_optimized_2.png']
+
+        path_img_rf = [os.path.join(BASE_PATH, ruta) for ruta in imagenes_rf]
+
         
-        for imagen in imagenes_rf:
+        for imagen in path_img_rf:
             img = Image.open(imagen)
             st.image(img, use_container_width=True)
             
@@ -326,8 +334,10 @@ elif menu == 'Comparativa de modelos':
         st.markdown('''A continuación se muestran los resultados de un modelo entrenado feature selection''')
     
         imagenes_lr = ['./img/logisticreg_plots/rl_optimized_curve.png','./img/logisticreg_plots/rl_conf_matrix_optimized.png']
-        
-        for imagen in imagenes_lr:
+
+        path_img_lr = [os.path.join(BASE_PATH, ruta) for ruta in imagenes_lr]
+
+        for imagen in path_img_lr:
             img = Image.open(imagen)
             st.image(img, use_container_width=True)
             
@@ -357,7 +367,9 @@ elif menu == 'Comparativa de modelos':
         imagenes_dl = ['./img/dl_plots/acc_val_acc_curve_dl.png','./img/dl_plots/loss_val_loss_curve_dl.png', 
                        './img/dl_plots/dl_conf_matrix.png']
         
-        for imagen in imagenes_dl:
+        path_img_dl = [os.path.join(BASE_PATH, ruta) for ruta in imagenes_dl]
+        
+        for imagen in path_img_dl:
             img = Image.open(imagen)
             st.image(img, use_container_width=True)
 
@@ -366,12 +378,16 @@ elif menu == 'Comparativa de modelos':
 elif menu == 'Demo Predicción': 
     st.title('Inserta parámetros para que el modelo realice una predicción')
     st.markdown('')
+    
+    BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
     #importamos modelo seleccionado y preprocesador
-    with open ('./model/preprocessing.pkl', 'rb') as file:
+    path_preprocessing = os.path.join(BASE_PATH, './model/preprocessing.pkl')
+    with open (path_preprocessing, 'rb') as file:
         preprocessing = pickle.load(file)
     
-    with open('./model/Modelo_LGBMClassifier_Controled', 'rb') as file:
+    path_model =  os.path.join(BASE_PATH,'./model/Modelo_LGBMClassifier_Controled')
+    with open(os.path.join(path_model, 'rb')) as file:
         unpickle_model_lgbm_controled = pickle.load(file)
 
     st.subheader('**:birthday: Edad**')
