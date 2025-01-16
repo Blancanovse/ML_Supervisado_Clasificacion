@@ -255,12 +255,12 @@ elif menu == 'Comparativa de modelos':
     BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
     baseline_df = pd.read_csv(os.path.join(BASE_PATH,'./data/df_resultados_cv.csv'))
-    baseline_df['img'] = ['./img/baseline_curves/b_dt_curve.png', './img/baseline_curves/b_rl_curve.png', 
+    rutas_img = ['./img/baseline_curves/b_dt_curve.png', './img/baseline_curves/b_rl_curve.png', 
                           './img/baseline_curves/b_rf_curve.png', './img/baseline_curves/b_xgb_curve.png',
                            './img/baseline_curves/b_lgbm_curve.png', './img/baseline_curves/b_knn_curve.png',
                             './img/baseline_curves/b_cb_curve.png' ]
     
-    baseline_img = [os.path.join(BASE_PATH, ruta) for ruta in baseline_df['img']]
+    baseline_img = [os.path.join(BASE_PATH, ruta) for ruta in rutas_img]
 
     st.dataframe(baseline_df)
 
