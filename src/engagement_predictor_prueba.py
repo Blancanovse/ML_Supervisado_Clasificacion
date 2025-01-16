@@ -259,6 +259,8 @@ elif menu == 'Comparativa de modelos':
                           './img/baseline_curves/b_rf_curve.png', './img/baseline_curves/b_xgb_curve.png',
                            './img/baseline_curves/b_lgbm_curve.png', './img/baseline_curves/b_knn_curve.png',
                             './img/baseline_curves/b_cb_curve.png' ]
+    
+    baseline_img = [os.path.join(BASE_PATH, ruta) for ruta in baseline_df['img']]
 
     st.dataframe(baseline_df)
 
@@ -387,7 +389,7 @@ elif menu == 'Demo Predicción':
         preprocessing = pickle.load(file)
     
     path_model =  os.path.join(BASE_PATH,'./model/Modelo_LGBMClassifier_Controled')
-    with open(os.path.join(path_model, 'rb')) as file:
+    with open(path_model, 'rb') as file:
         unpickle_model_lgbm_controled = pickle.load(file)
 
     st.subheader('**:birthday: Edad**')
