@@ -1,10 +1,12 @@
 # Machine Learning Supervisado 
 ## Clasificación del nivel de engagement en jugadores de videojuegos online 🎮
 ##### Fuente: 
-Rabie El Kharoua. (2024). 🎮 Predict Online Gaming Behavior Dataset [Data set]. Kaggle. https://doi.org/10.34740/KAGGLE/DSV/8742674. https://www.kaggle.com/datasets/rabieelkharoua/predict-online-gaming-behavior-dataset  
+Rabie El Kharoua. (2024). 🎮 Predict Online Gaming Behavior Dataset [Data set]. Kaggle. https://doi.org/10.34740/KAGGLE/DSV/8742674. https://www.kaggle.com/datasets/rabieelkharoua/predict-online-gaming-behavior-dataset 
 
-**Visita la demo del proyecto**
+
+**:point_right: Visita la demo del proyecto**
 https://mlsupervisadoclasificaciondemo.streamlit.app/
+
 
 **OBJETIVO:**  
 Predecir el nivel **nivel de engagement** que tendrá un jugador teniendo en cuenta una serie de características dadas como las horas de juego empleadas, las sesiones iniciadas, tipo de juego, etc.  
