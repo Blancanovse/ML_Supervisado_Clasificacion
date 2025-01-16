@@ -250,7 +250,7 @@ elif menu == 'Comparativa de modelos':
     st.header(':pushpin: Baseline') 
     st.markdown('Resultados de cross_validate combinado con StratifiedKFold()')
     #importamos df y añadimos columna con url de la imagen para el df interactivo
-    baseline_df = pd.read_csv('./data/df_resultados_cv.csv')
+    baseline_df = pd.read_csv(os.path.join(BASE_PATH,'./data/df_resultados_cv.csv'))
     baseline_df['img'] = ['./img/baseline_curves/b_dt_curve.png', './img/baseline_curves/b_rl_curve.png', 
                           './img/baseline_curves/b_rf_curve.png', './img/baseline_curves/b_xgb_curve.png',
                            './img/baseline_curves/b_lgbm_curve.png', './img/baseline_curves/b_knn_curve.png',
