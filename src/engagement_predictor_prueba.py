@@ -49,12 +49,12 @@ if menu == 'Inicio':
 elif menu == 'Análisis': 
     st.title('Visualización de datos y variable objetivo')
 
-    st.header(':dart: Traget')
+    st.header(':dart: Target')
 
     #importamos los datos del dataset para generar los sets de train y test para las gráficas
     #data = pd.read_csv("./data/raw/online_gaming_behavior_dataset.csv")
     BASE_PATH = os.path.dirname(os.path.abspath(__file__))
-    data= os.path.join(BASE_PATH, './data/raw/online_gaming_behavior_dataset.csv' )
+    data= pd.read_csv(os.path.join(BASE_PATH, './data/raw/online_gaming_behavior_dataset.csv' ))
     target = 'EngagementLevel'
     train_set, test_set = train_test_split(data, test_size=0.2, stratify=data[target], random_state=42)
 
