@@ -260,7 +260,7 @@ elif menu == 'Comparativa de modelos':
                            './img/baseline_curves/b_lgbm_curve.png', './img/baseline_curves/b_knn_curve.png',
                             './img/baseline_curves/b_cb_curve.png' ]
     
-    baseline_img = [os.path.join(BASE_PATH, ruta) for ruta in rutas_img]
+    baseline_df['img'] = [os.path.join(BASE_PATH, ruta) for ruta in rutas_img]
 
     st.dataframe(baseline_df)
 
@@ -270,7 +270,7 @@ elif menu == 'Comparativa de modelos':
 
     if not filas_seleccionadas.empty:
         for imagen, fila in filas_seleccionadas.iterrows(): #iteramos sobre las filas para abrir las imagenes desde la ruta proporcionada
-            imagen = Image.open(baseline_img)
+            imagen = Image.open(fila['img'])
             st.image(imagen)
     
     #Apartado de comparativa de modelos seleccionados
