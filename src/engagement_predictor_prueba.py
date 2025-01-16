@@ -54,6 +54,7 @@ elif menu == 'Análisis':
     #importamos los datos del dataset para generar los sets de train y test para las gráficas
     #data = pd.read_csv("./data/raw/online_gaming_behavior_dataset.csv")
     BASE_PATH = os.path.dirname(os.path.abspath(__file__))
+
     data= pd.read_csv(os.path.join(BASE_PATH, './data/raw/online_gaming_behavior_dataset.csv' ))
     target = 'EngagementLevel'
     train_set, test_set = train_test_split(data, test_size=0.2, stratify=data[target], random_state=42)
@@ -250,6 +251,7 @@ elif menu == 'Comparativa de modelos':
     st.header(':pushpin: Baseline') 
     st.markdown('Resultados de cross_validate combinado con StratifiedKFold()')
     #importamos df y añadimos columna con url de la imagen para el df interactivo
+    BASE_PATH = os.path.dirname(os.path.abspath(__file__))
     baseline_df = pd.read_csv(os.path.join(BASE_PATH,'./data/df_resultados_cv.csv'))
     baseline_df['img'] = ['./img/baseline_curves/b_dt_curve.png', './img/baseline_curves/b_rl_curve.png', 
                           './img/baseline_curves/b_rf_curve.png', './img/baseline_curves/b_xgb_curve.png',
@@ -314,7 +316,7 @@ elif menu == 'Comparativa de modelos':
             
 
         st.subheader('Comparativa')
-        df_comp_rf = pd.read_csv('./data/df_comp_rf.csv')
+        df_comp_rf = pd.read_csv(os.path.join(BASE_PATH,'./data/df_comp_rf.csv'))
         df_comp_rf.rename(columns={'Unnamed: 0' : 'model'}, inplace=True)
         st.dataframe(df_comp_rf)
 
@@ -331,7 +333,7 @@ elif menu == 'Comparativa de modelos':
             
 
         st.subheader('Comparativa')
-        df_comp_lr = pd.read_csv('./data/df_comp_lr.csv')
+        df_comp_lr = pd.read_csv(os.path.join(BASE_PATH,'./data/df_comp_lr.csv'))
         df_comp_lr.rename(columns={'Unnamed: 0' : 'model'}, inplace=True)
         st.dataframe(df_comp_lr)
 
