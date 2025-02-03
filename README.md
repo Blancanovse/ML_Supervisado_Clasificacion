@@ -26,14 +26,16 @@ We will focus on balanced accuracy and macro recall given the characteristics of
 - src : Directory of folders containing images used, data, trained model, scripts used and requirements.
 - engagement_predictor_app.py : script with code for a presentation of the project deployed in Streamlit as well as a demo of model predictions.
 - Model selected for the demo: src/model/Modelo_LGBMClassifier_Controled.pkl
+
+##### Dataset source:  
+Rabie El Kharoua. (2024). 🎮   
+Predict Online Gaming Behavior Dataset [Data set]. Kaggle.   
+https://doi.org/10.34740/KAGGLE/DSV/8742674. https://www.kaggle.com/datasets/rabieelkharoua/predict-online-gaming-behavior-dataset 
   
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 # (ES)
 # Machine Learning Supervisado 
 ## Clasificación del nivel de engagement en jugadores de videojuegos online 🎮
-##### Fuente: 
-Rabie El Kharoua. (2024). 🎮 Predict Online Gaming Behavior Dataset [Data set]. Kaggle. https://doi.org/10.34740/KAGGLE/DSV/8742674. https://www.kaggle.com/datasets/rabieelkharoua/predict-online-gaming-behavior-dataset 
-
 
 **:point_right: Visita la demo del proyecto**
 https://mlsupervisadoclasificaciondemo.streamlit.app/
@@ -59,5 +61,10 @@ Nos centraremos en el balanced accuracy y recall medio dada las características
 - src : Directorio de carpetas donde se encuentran imágenes empleadas, datos, modelo entrenado, scripts utilizados y requirements.
 - engagement_predictor_app.py : script con código para una presentación del proyecto desplegada en Streamlit además de una demo de predicciones del modelo.
 - Modelo seleccionado para la demo: src/model/Modelo_LGBMClassifier_Controled.pkl
+
+##### Fuente:   
+Rabie El Kharoua. (2024). 🎮   
+Predict Online Gaming Behavior Dataset [Data set]. Kaggle.   
+https://doi.org/10.34740/KAGGLE/DSV/8742674. https://www.kaggle.com/datasets/rabieelkharoua/predict-online-gaming-behavior-dataset 
 
 
