@@ -1,21 +1,22 @@
-# (EN)
+#### **(EN)**
 ## Supervised Machine Learning 
 ## Predicting the level of engagement in online video game players 🎮
 
-**:point_right: Visit the project demo**.
-https://supervisedmlmodel.streamlit.app/
+**:point_right: Visit the project demo**: 
+https://supervisedmlmodel.streamlit.app/  
 
+  
 
 **OBJECTIVE:**  
 To predict the level of **engagement level** that a player will have taking into account a series of given characteristics such as hours spent playing, sessions started, type of game, etc.  
 
-**METHODOLOGY  
+**METHODOLOGY**
 We are dealing with a **classification problem** for which we will use unsupervised classification algorithms.
 
-**METRICS:**.  
+**METRICS:**
 We will focus on balanced accuracy and macro recall given the characteristics of the target to be predicted.  
 
-**BUSINESS IMPACT  
+**BUSINESS IMPACT** 
  - Help to improve user retention strategies.
  - Abandonment forecasting.
  - Improve monetisation strategies.
@@ -33,7 +34,7 @@ Predict Online Gaming Behavior Dataset [Data set]. Kaggle.
 https://doi.org/10.34740/KAGGLE/DSV/8742674. https://www.kaggle.com/datasets/rabieelkharoua/predict-online-gaming-behavior-dataset 
   
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
-# (ES)
+#### **(ES)**
 # Machine Learning Supervisado 
 ## Clasificación del nivel de engagement en jugadores de videojuegos online 🎮
 
