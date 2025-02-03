@@ -378,7 +378,7 @@ elif menu == 'Model Comparative':
 
 
 #preparamos la pagina de la demo
-elif menu == 'Demo Prediction': 
+elif menu == 'Prediction Demo': 
     st.title('Insert the parameters for model prediction')
     st.markdown('')
     
